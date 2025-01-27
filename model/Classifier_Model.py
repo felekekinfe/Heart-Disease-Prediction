@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+import pickle
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import RandomizedSearchCV,GridSearchCV
@@ -15,7 +15,8 @@ def Heart_Disease_Classification_Model(X_train, X_test, y_train, y_test):
     model.fit(X_train,y_train)
    
 
-    return model.predict(X_test)
+    with open('model/_model.pkl', 'wb') as file:
+        pickle.dump(model, file)
 
 
 if __name__=='__main__':
