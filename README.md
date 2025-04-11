@@ -104,7 +104,7 @@ The script performs these steps:
 4. **Trains Model**: Logistic regression with:
    - `C=0.23357214690901212`
    - `solver='liblinear'`
-   *(Pre-tuned, likely via `RandomizedSearchCV` or `GridSearchCV`.)*
+   *(Pre-tuned, via `RandomizedSearchCV` or `GridSearchCV`.)*
 5. **Saves Model**: Exports to `_model.pkl` using `pickle`.
 
 ---
